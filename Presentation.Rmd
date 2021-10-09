@@ -1,0 +1,46 @@
+---
+title: "Presentation"
+author: "Boyu Chen"
+date: "10/8/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+
+```
+
+```{r}
+source("wrangling_code.R")
+source("visualization_function.R")
+```
+
+Tidy Data
+I will show my data is tidy data.You can see the data in wranglin_code.R
+
+```{r}
+data2 <- select(finaldata,country,X1806.x, X1806.y)
+colnames(data2) = c("country","year 1806 child mortality","year 1806 life expectation ")
+head(data2)
+```
+
+I am interested in the relationship between the mortality and life expectation. These two index can show the Level of medical care of country. To be contrast,TI choose two countries -- China and the United States to make a comparison between these two countries about the relationship between child mortality(0~5) and people life expectation. China and the US are two the biggest country in the world. China is the biggest developing country, and the US is the biggest developed countries. There are might be some interest things in it.
+
+```{r}
+china<-finaldata %>% filter(country == "China")
+us<-finaldata %>% filter(country == "United States")
+```
+
+```{r}
+myfunction(us)
+```
+From the plot we can get that as the higher child mortality leads the shorter life expectation.
+```{r}
+myfunction(china)
+```
+From the plot we can get that as the higher child mortality leads the lower life expectation.
+
+
+Although both of these two country shows the negative relationship between expect life timw and child mortality, the US did better in the countrol of child mortality maybe due to the living standard. One interest thing is that with the same child mortality, China shows the higher expectation of life.
+
