@@ -44,3 +44,20 @@ From the plot we can get that as the higher child mortality leads the lower life
 
 Although both of these two country shows the negative relationship between expect life timw and child mortality, the US did better in the countrol of child mortality maybe due to the living standard. One interest thing is that with the same child mortality, China shows the higher expectation of life.
 
+
+We could then look at two countries that are among the worst ranking countries in health care standards according to the world health organization, Sierra Leone and Myanmar.
+
+```{r}
+sierraleone<- finaldata %>% filter(country == "Sierra Leone")
+myanmar<- finaldata %>% filter(country == "Myanmar")
+```
+
+```{r}
+myfunction(sierraleone)
+```
+
+```{r}
+myfunction(myanmar)
+```
+
+
