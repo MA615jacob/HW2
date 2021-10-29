@@ -58,6 +58,6 @@ myfunction(sierraleone)
 
 ```{r}
 myfunction(myanmar)
-```
+``` 
 
 
